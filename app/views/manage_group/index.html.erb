@@ -1,0 +1,17 @@
+<img src="<%= @user.photo %>" />
+<%= @upload_server.response %>
+<h1>Hello, <%= @user.first_name + " " + @user.last_name %> !</h1>
+<% @ress.each do |r| %>
+  <img src="<%= r['image']['preview']%>" />
+  </br>
+  Channel: 1+1
+  </br>
+  Program Name: <%= r['title']%>
+  </br>
+  Start at: <%= Time.at(r['realtime_begin']).strftime('%H:%M')%>
+  </br>
+  End at: <%= Time.at(r['realtime_end']).strftime('%H:%M')%>
+  </br>
+  </br>
+  </hr>
+<% end %>
